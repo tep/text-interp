@@ -149,11 +149,11 @@ VarFormat defines what a variable expression should look like.
 [release-img]: https://img.shields.io/github/release/toolmanorg/text-interp/all.svg
 [release]: https://github.com/toolmanorg/text-interp/releases
 
-[godoc-img]: https://godoc.org/toolman.org/flags/tristate?status.svg
-[godoc]: https://godoc.org/toolman.org/flags/tristate
+[godoc-img]: https://godoc.org/toolman.org/text/interp?status.svg
+[godoc]: https://godoc.org/toolman.org/text/interp
 
-[reportcard-img]: https://goreportcard.com/badge/toolman.org/flags/tristate
-[reportcard]: https://goreportcard.com/report/toolman.org/flags/tristate
+[reportcard-img]: https://goreportcard.com/badge/toolman.org/text/interp
+[reportcard]: https://goreportcard.com/report/toolman.org/text/interp
 
 [travis-img]: https://travis-ci.org/tep/text-interp.svg?branch=master
 [travis]: https://travis-ci.org/tep/text-interp
