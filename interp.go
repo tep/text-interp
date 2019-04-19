@@ -96,6 +96,16 @@ func (i *Interpolator) Interpolate(s string) (string, error) {
 	}
 }
 
+// InterpolateBytes is a wrapper around Interpolate that accepts and returns
+// abyte slices instead of strings.
+func (i *Interpolator) InterpolateBytes(in []byte) ([]byte, error) {
+	out, err := i.Interpolate(string(in))
+	if err != nil {
+		return nil, err
+	}
+	return []byte(out), nil
+}
+
 // Value is an enpty interface type returned by a Resolvers' Resolve method.
 // Its underlying value should be something that is ultimately stringable with
 // the following guidelines:
