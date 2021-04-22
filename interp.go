@@ -35,7 +35,7 @@ var debugf = func(msg string, args ...interface{}) (int, error) { return 0, nil 
 type Resolver interface {
 	// Resolve returns the Value associated with the given variable. If no Value
 	// is found, Resolve may return nil and an error. Any error returned here
-	// will ultimately be returned by Replace.
+	// will ultimately be returned by Interpolate.
 	Resolve(variable string) (value Value, err error)
 }
 
@@ -97,7 +97,7 @@ func (i *Interpolator) Interpolate(s string) (string, error) {
 }
 
 // InterpolateBytes is a wrapper around Interpolate that accepts and returns
-// abyte slices instead of strings.
+// byte slices instead of strings.
 func (i *Interpolator) InterpolateBytes(in []byte) ([]byte, error) {
 	out, err := i.Interpolate(string(in))
 	if err != nil {
@@ -106,7 +106,7 @@ func (i *Interpolator) InterpolateBytes(in []byte) ([]byte, error) {
 	return []byte(out), nil
 }
 
-// Value is an enpty interface type returned by a Resolvers' Resolve method.
+// Value is an enpty interface type returned by a Resolver's Resolve method.
 // Its underlying value should be something that is ultimately stringable with
 // the following guidelines:
 //
