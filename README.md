@@ -48,11 +48,6 @@ For both Interpolator constructors, the caller must provide a Resolver for
 resolving variable names to their associated values.
 
 
-
-
-
-
-
 ### <a name="New">func</a> [New](/src/target/interp.go?s=1089:1123#L32)
 ``` go
 func New(g Resolver) *Interpolator
@@ -69,9 +64,6 @@ NewWithFormat returns a new Interpolator for the given Resolver and
 specified VarFormat.
 
 
-
-
-
 ### <a name="Interpolator.Interpolate">func</a> (\*Interpolator) [Interpolate](/src/target/interp.go?s=1807:1867#L50)
 ``` go
 func (i *Interpolator) Interpolate(s string) (string, error)
@@ -86,8 +78,6 @@ Interpolate continues this process until it no longer finds a variable
 expression in the provided string, or an error is encountered.
 
 
-
-
 ## <a name="Resolver">type</a> [Resolver](/src/target/interp.go?s=211:486#L11)
 ``` go
 type Resolver interface {
@@ -98,14 +88,6 @@ type Resolver interface {
 }
 ```
 Resolver is used by Interpolator to lookup values for interpolated variables.
-
-
-
-
-
-
-
-
 
 
 ## <a name="Value">type</a> [Value](/src/target/interp.go?s=2639:2661#L85)
@@ -122,14 +104,6 @@ the following guidelines:
 	* If Value is an encoding.TextMarshaler, its MarshalText()
 	  method is called and the results are converted to a string
 	* Otherwise the value is passed through fmt.Sprintf("%v")
-
-
-
-
-
-
-
-
 
 
 ## <a name="VarFormat">type</a> [VarFormat](/src/target/varfmt.go?s=175:405#L12)
